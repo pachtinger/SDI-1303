@@ -58,25 +58,42 @@ var roundsPerChoice = 31;
 var addMaleChar = ("James");
 var addFemChar = ("Donna");
 
+console.log ("The year is 2013, you need to build a character, political path and how long you want to play." + "\n");
+console.log ("For example, you can choose the options and it would look like one of the choices from below:")
 
-//assuming you picked your characters name:
-console.log ("Hello " + nameChoices[1] + "." + " The year is 2013, and it is starting to look like an interesting year to be " + ageChoice[2] + " years old and in your adult life.");
 
-//choice of length of game and political race.  There will be an undefined game length in the end someday so you can play as long as you want.
-//console.log ("You have chosen to play this game for " + gameLength[3] + " rounds, labled as " + polChoice[3]+ " for your political choice.");
-console.log ("The rounds per choice of game length is listed below:" );
-console.log ("We have " + gameLengths.length + " choices for game length.");
-
-console.log ("This shows the end.");
-
-for (var i = 0, j = nameChoice.length; i < j; i++){
-	var toAmTurns = (roundsPerChoice * gameLength[i]);
-	console.log ("You can choose " + nameChoice[i] + " as a name choice for the purpose of this asssignment." + "\n" + "You can choose" + polChoice[i] + " as a political choice to go with the name" + "\n" + "You can choose " + gameLength[i] + " months, as a choice, depending on how long you want to play the game.");
+for (var i = 0, j = nameChoices.length, h = ageChoice.length, k = polChoices.length, l = gameLengths.length; i < j, i < h, i < k, i < l; i++){
+	var toAmTurns = (roundsPerChoice * gameLengths[i]);
+	console.log ("You can choose " + nameChoices[i] + " as a name choice for the purpose of this asssignment." + "\n" + "You can choose " + polChoices[i] + " as a political choice to go with the name" + "\n" + "You can choose " + gameLengths[i] + " months, as a choice, depending on how long you want to play the game.");
 	console.log ("There are " + toAmTurns + " turns with this game length choice");
 
 };
 
 
+//assuming you picked your characters name:
+console.log ("Hello " + nameChoices[1] + "." + " The year is 2013, and it is starting to look like an interesting year to be " + ageChoice[2] + " years old and in your adult life.");
+
+//choice of length of game and political race.  There will be an undefined game length in the end someday so you can play as long as you want.
+console.log ("You have chosen to play this game for " + gameLengths[3] + " rounds, labled as " + polChoices[3]+ " for your political choice.");
+
+
+
+
+
+
+
+
+//for (var tankNumber = 0; tankNumber < tankNames.length; tankNumber++) {
+//visitTank(tankNumber);
+
+
+
+
+
+
+
+
+console.log ("This shows the end.");
 
 
 /*
