@@ -18,11 +18,10 @@ The object of this game is to not only survive as a citizen of the United States
 
 */
 
-var nameChoice = [
+var nameChoices = [
 			"David",
 			"Dustin",
 			"Brandon",
-			"Tom",
 			"Sarah",
 			"Denise",
 			"Brenda"
@@ -37,20 +36,22 @@ var ageChoice = [
 			50
 ];
 
-var polChoice = [
+var polChoices = [
 			"democrat",
 			"republican",
 			"liberal",
+			"grassrots",
+			"other",
 			"unknown"
 ];
 
-var gameLength = [
+var gameLengths = [
 			3,
 			6,
 			9,
 			12,
 			24,
-			undefined
+			48
 ];
 
 var roundsPerChoice = 31;
@@ -59,15 +60,42 @@ var addFemChar = ("Donna");
 
 
 //assuming you picked your characters name:
-console.log ("Hello " + nameChoice[1] + "." + " The year is 2013, and it is starting to look like an interesting year to be " + ageChoice[2] + " years old and in your adult life.");
+console.log ("Hello " + nameChoices[1] + "." + " The year is 2013, and it is starting to look like an interesting year to be " + ageChoice[2] + " years old and in your adult life.");
 
-//choice of length of game and political race.
-console.log ("You have chosen to play this game for " + gameLength[3] + " rounds, labled as " + polChoice[3]+ " for your political choice.");
-//console.log ("Each month will represent " + (roundsPerChoice * gameLength[]) + " turns.");
+//choice of length of game and political race.  There will be an undefined game length in the end someday so you can play as long as you want.
+//console.log ("You have chosen to play this game for " + gameLength[3] + " rounds, labled as " + polChoice[3]+ " for your political choice.");
+console.log ("The rounds per choice of game length is listed below:" );
+console.log ("We have " + gameLengths.length + " choices for game length.");
+
+console.log ("This shows the end.");
+
+for (var i = 0, j = nameChoice.length; i < j; i++){
+	var toAmTurns = (roundsPerChoice * gameLength[i]);
+	console.log ("You can choose " + nameChoice[i] + " as a name choice for the purpose of this asssignment." + "\n" + "You can choose" + polChoice[i] + " as a political choice to go with the name" + "\n" + "You can choose " + gameLength[i] + " months, as a choice, depending on how long you want to play the game.");
+	console.log ("There are " + toAmTurns + " turns with this game length choice");
+
+};
 
 
 
 
+/*
 
-
-
+console.log ("This shows the end.");
+ var tankNames = ["Shark Tank", "Sting Ray Tank", "Dolphin Tank", "Fish Tank"],
+	minutesPerTank = [20, 15, 25, 30],
+	kidNames = ["Braden", "Rhys", "Zoe"];
+        var visitTank = function(whatTank) {
+            var tankName = tankNames[whatTank],
+            minutesThisTank = minutesPerTank[tankNumber];
+            console.log(kidNames[1] + " wanted us to visit the " + tankName + " for " + minutesThisTank + " minutes. So I set the timer on my watch!");
+            for (var minutes = 0; minutes < minutesThisTank; minutes += 10) {
+                    var minutesRemain = minutesThisTank - minutes;
+                    console.log("We have " + minutesRemain + " minutes left. " + minutes + " minutes have past.");
+            }
+            console.log("We finished with the " + tankName + ".");
+        };
+        for (var tankNumber = 0; tankNumber < tankNames.length; tankNumber++) {
+            visitTank(tankNumber);
+        };
+*/
