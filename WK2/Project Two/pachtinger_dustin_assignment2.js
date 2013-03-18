@@ -59,10 +59,33 @@ var addMaleChar = ("James");
 var addFemChar = ("Donna");
 
 console.log ("The year is 2013, you need to build a character, political path and how long you want to play." + "\n");
-console.log ("For example, you can choose the options and it would look like one of the choices from below:")
+
+//Boolean
+/*("Do you believe our government is corrupt?" + ("Do you believe that you have been conditioned to think, act, and respond a certain way to how we Americans live in our society with only little civil liberty adjustments or do you think that is just conspiracy theory? "));
+*/
+function freeYourself (truthBeTold){
+			var makeChoice = window.confirm ("Do you believe our government is corrupt?");
+				if (makeChoice == true){
+				console.log ("As an American citizen, if you are one, you are very wise in your choice." + "\n" + "Americans, far to often are blind to the obvious, and their own rights and freedoms, that are being taken away from them at an alarming rate!" + "\n" + "Reality is always harder to accept than fiction." + "\n" + "It is time for Americans to wake up and take our rights and freedoms back" + "\n" + "In the end, we as the people, are stronger than those who are corrupt and in power.");
+		}else{
+				console.log ("You really need to wake up and see the world around you." + "\n" + "It is alright that you have your opinion,  but ignoring the facts of reality to hide behind it, is what is destroying America." + "\n" + "But please, by no means take my word for it."  + "\n" + "I want you to doubt me and educate yourself." + "\n" + "Please, edcuate yourself, then tell me what the facts are and what is going on!");
+}
+};
+freeYourself ();
+
+/*
+var quarterFlip = confirm ('Click "OK" for heads, and "Cancel" for tales.');
+	if (quarterFlip == true)
+	{
+		console.log (weLeave + " and head for " + moa + "!" + "\n");
+	}else{
+		console.log (weStayHome + " and look for a mansion to live in." + "\n");
+};
+*/
+console.log ("For example, you can choose the options and it would look like one of the choices from below:");
 
 
-for (var i = 0, j = nameChoices.length, h = ageChoice.length, k = polChoices.length, l = gameLengths.length; i < j, i < h, i < k, i < l; i++){
+for (var i = 0, j = nameChoices.length; i < j; i++){
 	var toAmTurns = (roundsPerChoice * gameLengths[i]);
 	console.log ("You can choose " + nameChoices[i] + " as a name choice for the purpose of this asssignment." + "\n" + "You can choose " + polChoices[i] + " as a political choice to go with the name" + "\n" + "You can choose " + gameLengths[i] + " months, as a choice, depending on how long you want to play the game.");
 	console.log ("There are " + toAmTurns + " turns with this game length choice");
