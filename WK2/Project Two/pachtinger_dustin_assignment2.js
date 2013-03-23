@@ -26,16 +26,22 @@ var nameChoices = [
 			"Denise",
 			"Brenda"
 ];
-
+var sexChoice = [
+			"female",
+			"male",
+			"hermaphrodite"
+];
 var ageChoice = [
 			18,
 			21,
 			30,
 			35,
 			45,
-			50
+			50,
+			"old",
+			"young",
+			"average"
 ];
-
 var polChoices = [
 			"democrat",
 			"republican",
@@ -44,7 +50,6 @@ var polChoices = [
 			"other",
 			"unknown"
 ];
-
 var gameLengths = [
 			3,
 			6,
@@ -128,10 +133,63 @@ var femaleHairChoices = [
 		"Micro-Mini\'s",
 		"Butch"
 ];
-console.log (femaleHairChoices[3]);
-
-
-
+var partSizes = [
+		"big",
+		"small",
+		"long",
+		"short",
+		"oblongated",
+		"stub nosed",
+		"slender",
+		"muscular",
+		"fat",
+		"average",
+		"tall"
+];
+var colorChoices = [
+		"blue",
+		"brown",
+		"green",
+		"hazel",
+		"blonde",
+		"black",
+		"red",
+		"auburn",
+		"pink",
+		"purple",
+		"white",
+		"gray"
+];
+var clothes = [
+		"shirts",
+		"pants",
+		"shorts",
+		"dress",
+		"skirt",
+		"pantihose",
+		"shoes"
+];
+var accessories = [
+		"wallet",
+		"purse",
+		"neckaless",
+		"bracelet",
+		"nose peircing",
+		"lip peircing",
+		"tounge peircing",
+		"watch",
+		"earrings",
+		"ring"
+];
+var money = [
+	"cash",
+	"checks",
+	"checking account",
+	"savings account",
+	"retirement savings accounts",
+	"credit cards",
+	"PayPal"
+];
 
 
 //for (var tankNumber = 0; tankNumber < tankNames.length; tankNumber++) {
