@@ -54,11 +54,18 @@ var gameLengths = [
 			48
 ];
 
+//Begining
+console.log ("INSTRUCTIONS & INFORMATION" + "\n" + "--About The Game--");
+
+var currentDate = new Date();
+console.log ("It is " + currentDate + ". Time is passing by, and you need to buld a character and political path.");
+console.log ("You must also decide on the length of time you would like to play this game for?");
+
+
 var roundsPerChoice = 31;
 var addMaleChar = ("James");
 var addFemChar = ("Donna");
 
-console.log ("The year is 2013, you need to build a character, political path and how long you want to play." + "\n");
 
 //Boolean
 /*("Do you believe our government is corrupt?" + ("Do you believe that you have been conditioned to think, act, and respond a certain way to how we Americans live in our society with only little civil liberty adjustments or do you think that is just conspiracy theory? "));
@@ -72,6 +79,8 @@ function freeYourself (truthBeTold){
 }
 };
 freeYourself ();
+
+//Strin
 
 /*
 var quarterFlip = confirm ('Click "OK" for heads, and "Cancel" for tales.');
@@ -91,6 +100,8 @@ for (var i = 0, j = nameChoices.length; i < j; i++){
 	console.log ("There are " + toAmTurns + " turns with this game length choice");
 
 };
+//String
+
 
 
 //assuming you picked your characters name:
@@ -100,7 +111,24 @@ console.log ("Hello " + nameChoices[1] + "." + " The year is 2013, and it is sta
 console.log ("You have chosen to play this game for " + gameLengths[3] + " rounds, labled as " + polChoices[3]+ " for your political choice.");
 
 
+//Total Options
 
+
+var maleHairChoices = [
+		"Bald",
+		"High & Tight",
+		"Crew Cut",
+		"Spiked",
+		"Long"
+];
+var femaleHairChoices = [
+		"Ponytail",
+		"French Braided",
+		"Bun",
+		"Micro-Mini\'s",
+		"Butch"
+];
+console.log (femaleHairChoices[3]);
 
 
 
