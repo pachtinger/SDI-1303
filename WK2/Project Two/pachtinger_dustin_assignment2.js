@@ -140,34 +140,7 @@ var assests = [
 		"stocks"
 ];
 
-function character(){
-	var whatsYourSex = window.prompt ("Pick your sex." + "\n" + "Your options are: Male, Female, Other");
-		if (whatsYourSex === "female" || "Female" || "F" || "f"){
-			console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices[0]);
-			console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.toString());
-			console.log ("If you choose 'Other' for your hairstyle choice, you can also choose the length from these options: ");
-				var lengthChoice = (partSizes[1] + partSizes[2] + partSizes[3]);
-				console.log (lengthChoice);
-		}else if (whatsYourSex === "male" || "Male" || "M" || "m"){
-			console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.male.length);
-			console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.length);
-			console.log ("If you choose 'Other' for your hairstyle choice, you can also choose the length from these options: ");
-			var lengthChoice = new Array ["short", "medium", "long"];
-			console.log (lengthChoice);
-		}else if (whatsYourSex === "other" || "Other" || "O" || "o"){
-			console.log ("If you have choosen this, option, other can only mean you are a 'Hermaphrodite', and in that case, you can choose from either of the options for male or female.");
-			console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.female.length + "\n" + hairChoices.male.length);
-			console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.length);
-			console.log ("If you choose 'Other' for your hairstyle choice, you can also choose the length from these options: ");
-			var lengthChoice = new Array ["short", "medium", "long"];
-			console.log (lengthChoice);
-	}else{
-		window.alert ("You have entered an incorrect response." + "\n" + " This page will now restart and you can try again.");
-		window.location = reload(page);
-	};
-}
 
-console.log (character());
 
 
 //Begining
@@ -176,13 +149,51 @@ console.log ("INSTRUCTIONS & INFORMATION" + "\n" + "--About The Game--");
 var currentDate = new Date();
 console.log ("It is " + currentDate + ". Time is passing by, and you need to buld a character and political path.");
 console.log ("You must also decide on the length of time you would like to play this game for?");
+console.log ("Starting with your avatar buildup in it's begining stages, what you will have to decide will be similar to other games, where you have to decide the gender, among other options.  It will be similar to this:");
+function avatarChoices(){
+	var whatsYourSex = window.prompt ("Pick your gender." + "\n" + "Your options are: Male, Female, Other");
+		if (whatsYourSex === "female" || whatsYourSex === "Female" || whatsYourSex === "F" || whatsYourSex === "f"){
+			console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.female.toString());
+			console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.toString());
+			console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
+				var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
+				console.log (lengthChoice);
+		}else if (whatsYourSex === "male" || whatsYourSex === "Male" || whatsYourSex === "M" || whatsYourSex === "m"){
+			console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.male.toString());
+			console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.toString());
+			console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
+				var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
+				console.log (lengthChoice);
+		}else if (whatsYourSex === "other" || whatsYourSex === "Other" || whatsYourSex === "O" || whatsYourSex === "o"){
+			var othRem = hairChoices.female.pop();
+			console.log ('If you have choosen this option of "other", this can only mean you are a "Hermaphrodite", or not human, in either case, you can choose from both of the options available for male and female.');
+			console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.female.toString() + "\n" + hairChoices.male.toString());
+			console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.toString());
+			console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
+			var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
+			console.log (lengthChoice);
+	}else{
+		window.alert ("You have entered an incorrect response." + "\n" + " You can restart and try again if you choose.");
+		var pageRestart = window.confirm("Would you like to reload the page?");
+			if (pageRestart === true){
+						location.reload(true);
+					}else{
+						console.log ("You will now be redirected to Google.");
+						window.location = ("http://www.google.com");
+						}
+	};
+}
+avatarChoices();
+
+
+
 
 
 var roundsPerChoice = 31;
 var addMaleChar = ("James");
 var addFemChar = ("Donna");
 
-
+console.log ("\n" + "After deciding your avatar, you will be answering quesitons like this:");
 //Boolean
 /*("Do you believe our government is corrupt?" + ("Do you believe that you have been conditioned to think, act, and respond a certain way to how we Americans live in our society with only little civil liberty adjustments or do you think that is just conspiracy theory? "));
 */
