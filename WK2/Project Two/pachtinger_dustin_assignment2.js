@@ -58,6 +58,117 @@ var gameLengths = [
 			24,
 			48
 ];
+var hairChoices = {
+		female :[
+					"ponytail",
+					"french braided",
+					"bun",
+					"micro-mini\'s",
+					"butch",
+					"other"
+					],
+		male	:[
+					"bald",
+					"high & tight",
+					"crew cut",
+					"spiked",
+					"long",
+					"other"
+					]
+};
+var partSizes = [
+		"big",
+		"small",
+		"long",
+		"medium",
+		"short",
+		"oblongated",
+		"stub nosed",
+		"slender",
+		"muscular",
+		"fat",
+		"average",
+		"tall"
+];
+var colorChoices = [
+		"blue",
+		"brown",
+		"green",
+		"hazel",
+		"blonde",
+		"black",
+		"red",
+		"auburn",
+		"pink",
+		"purple",
+		"white",
+		"gray"
+];
+var clothes = [
+		"shirts",
+		"pants",
+		"shorts",
+		"dress",
+		"skirt",
+		"pantihose",
+		"shoes"
+];
+var accessories = [
+		"wallet",
+		"purse",
+		"neckaless",
+		"bracelet",
+		"nose peircing",
+		"lip peircing",
+		"tounge peircing",
+		"watch",
+		"earrings",
+		"ring"
+];
+var money = [
+		"cash",
+		"checks",
+		"checking account",
+		"savings account",
+		"retirement savings accounts",
+		"credit cards",
+		"PayPal"
+];
+var assests = [
+		"house",
+		"automobile",
+		"stocks"
+];
+
+function character(){
+	var whatsYourSex = window.prompt ("Pick your sex." + "\n" + "Your options are: Male, Female, Other");
+		if (whatsYourSex === "female" || "Female" || "F" || "f"){
+			console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices[0]);
+			console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.toString());
+			console.log ("If you choose 'Other' for your hairstyle choice, you can also choose the length from these options: ");
+				var lengthChoice = (partSizes[1] + partSizes[2] + partSizes[3]);
+				console.log (lengthChoice);
+		}else if (whatsYourSex === "male" || "Male" || "M" || "m"){
+			console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.male.length);
+			console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.length);
+			console.log ("If you choose 'Other' for your hairstyle choice, you can also choose the length from these options: ");
+			var lengthChoice = new Array ["short", "medium", "long"];
+			console.log (lengthChoice);
+		}else if (whatsYourSex === "other" || "Other" || "O" || "o"){
+			console.log ("If you have choosen this, option, other can only mean you are a 'Hermaphrodite', and in that case, you can choose from either of the options for male or female.");
+			console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.female.length + "\n" + hairChoices.male.length);
+			console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.length);
+			console.log ("If you choose 'Other' for your hairstyle choice, you can also choose the length from these options: ");
+			var lengthChoice = new Array ["short", "medium", "long"];
+			console.log (lengthChoice);
+	}else{
+		window.alert ("You have entered an incorrect response." + "\n" + " This page will now restart and you can try again.");
+		window.location = reload(page);
+	};
+}
+
+console.log (character());
+
 
 //Begining
 console.log ("INSTRUCTIONS & INFORMATION" + "\n" + "--About The Game--");
@@ -119,109 +230,8 @@ console.log ("You have chosen to play this game for " + gameLengths[3] + " round
 //Total Options
 
 
-var maleHairChoices = [
-		"Bald",
-		"High & Tight",
-		"Crew Cut",
-		"Spiked",
-		"Long"
-];
-var femaleHairChoices = [
-		"Ponytail",
-		"French Braided",
-		"Bun",
-		"Micro-Mini\'s",
-		"Butch"
-];
-var partSizes = [
-		"big",
-		"small",
-		"long",
-		"short",
-		"oblongated",
-		"stub nosed",
-		"slender",
-		"muscular",
-		"fat",
-		"average",
-		"tall"
-];
-var colorChoices = [
-		"blue",
-		"brown",
-		"green",
-		"hazel",
-		"blonde",
-		"black",
-		"red",
-		"auburn",
-		"pink",
-		"purple",
-		"white",
-		"gray"
-];
-var clothes = [
-		"shirts",
-		"pants",
-		"shorts",
-		"dress",
-		"skirt",
-		"pantihose",
-		"shoes"
-];
-var accessories = [
-		"wallet",
-		"purse",
-		"neckaless",
-		"bracelet",
-		"nose peircing",
-		"lip peircing",
-		"tounge peircing",
-		"watch",
-		"earrings",
-		"ring"
-];
-var money = [
-	"cash",
-	"checks",
-	"checking account",
-	"savings account",
-	"retirement savings accounts",
-	"credit cards",
-	"PayPal"
-];
-
-
-//for (var tankNumber = 0; tankNumber < tankNames.length; tankNumber++) {
-//visitTank(tankNumber);
-
-
-
-
-
-
 
 
 console.log ("This shows the end.");
 
 
-/*
-
-console.log ("This shows the end.");
- var tankNames = ["Shark Tank", "Sting Ray Tank", "Dolphin Tank", "Fish Tank"],
-	minutesPerTank = [20, 15, 25, 30],
-	kidNames = ["Braden", "Rhys", "Zoe"];
-        var visitTank = function(whatTank) {
-            var tankName = tankNames[whatTank],
-            minutesThisTank = minutesPerTank[tankNumber];
-            console.log(kidNames[1] + " wanted us to visit the " + tankName + " for " + minutesThisTank + " minutes. So I set the timer on my watch!");
-            for (var minutes = 0; minutes < minutesThisTank; minutes += 10) {
-                    var minutesRemain = minutesThisTank - minutes;
-                    console.log("We have " + minutesRemain + " minutes left. " + minutes + " minutes have past.");
-            }
-            console.log("We finished with the " + tankName + ".");
-        };
-        for (var tankNumber = 0; tankNumber < tankNames.length; tankNumber++) {
-            visitTank(tankNumber);
-        };
-*/
