@@ -141,41 +141,48 @@ var nameChoice = avatarName;
 console.log ("You have chosen " + nameChoice + " as your avatar's name!");
 console.log ("So " + nameChoice + ", what would you like your avatar to look like?");
 
+//Run Avatar Choices Function:
 function avatarChoices(){
 	var whatsYourSex = window.prompt ("Pick your gender." + "\n" + "Your options are: Male, Female, Other");
-	var genderChoice = whatsYourSex;
+	//var genderChoice = whatsYourSex;
 		if (whatsYourSex === "female" || whatsYourSex === "Female" || whatsYourSex === "F" || whatsYourSex === "f"){
-console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.female.toString());
-console.log ("You can pick from these colors to dye your hair: " + "\n" + colorChoices.toString());
-console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
-var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
-console.log (lengthChoice);
+				console.log ("As a female character, you can pick from these hairstyle choices: " + "\n" + hairChoices.female.toString());
+				console.log ("You can pick from these colors to dye your hair: " + "\n" + colorChoices.toString());
+				console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
+					var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
+						console.log (lengthChoice);
+							return gender = ("female");
 	}else if (whatsYourSex === "male" || whatsYourSex === "Male" || whatsYourSex === "M" || whatsYourSex === "m"){
-console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.male.toString());
-console.log ("You can pick from these color to dye your hair: " + "\n" + colorChoices.toString());
-console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
-var lengthChoice = (partSizes[4] + "," + partSizes[2] + "," + partSizes[3]);
-console.log (lengthChoice);
+				console.log ("As a male character, you can pick from these hairstyle choices: " + "\n" + hairChoices.male.toString());
+				console.log ("You can pick from these color to dye your hair: " + "\n" + colorChoices.toString());
+				console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
+					var lengthChoice = (partSizes[4] + "," + partSizes[2] + "," + partSizes[3]);
+						console.log (lengthChoice);
+							return gender = ("male");
 	}else if (whatsYourSex === "other" || whatsYourSex === "Other" || whatsYourSex === "O" || whatsYourSex === "o"){
-var othRem = hairChoices.female.pop();
-console.log ('If you have choosen this option of "other", this can only mean you are a "Hermaphrodite", or not human, in either case, you can choose from both of the options available for male and female.');
-console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.female.toString() + "\n" + hairChoices.male.toString());
-console.log ("You can pick from these colors to dye your hair: " + "\n" + colorChoices.toString());
-console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
-var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
-console.log (lengthChoice);
+			var othRem = hairChoices.female.pop();
+				console.log ('If you have choosen this option of "other", this can only mean you are a "Hermaphrodite", or not human, in either case, you can choose from both of the options available for male and female.');
+				console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.female.toString() + "\n" + hairChoices.male.toString());
+				console.log ("You can pick from these colors to dye your hair: " + "\n" + colorChoices.toString());
+				console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
+					var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
+						console.log (lengthChoice);
+							return gender = ("hermaphrodite");
 	}else{
-window.alert ("You have entered an incorrect response." + "\n" + " You can restart and try again if you choose.");
-var pageRestart = window.confirm("Would you like to reload the page?");
-	if (pageRestart === true){
-		location.reload(true);
+		window.alert ("You have entered an incorrect response." + "\n" + " You can restart and try again if you choose.");
+		var pageRestart = window.confirm("Would you like to reload the page?");
+			if (pageRestart === true){
+				location.reload(true);
 	}else{
-console.log ("You will now be redirected to Google.");
-window.location = ("http://www.google.com");
+		console.log ("You will now be redirected to Google.");
+		window.location = ("http://www.google.com");
 		}
-	};
+	}
 }
 avatarChoices();
+
+
+//console.log ("This should show "+ gender);
 
 var roundsPerChoice = 31;
 var addMaleChar = ("James");
@@ -217,21 +224,34 @@ console.log("In this game, your age will determine the realistics in length of g
 console.log("What that means is, if you start out the game at an " + ageChoice[2] + '\middle age, and you decide to play the game until death, the system will give you the amount of turns based off of your age and a monthly caculation until the national average of death for a male/female is met.');
 console.log ("\n");
 
-if (whatsYourSex === "female" || whatsYourSex === "Female" || whatsYourSex === "F" || whatsYourSex === "f"){
-	var whatsYourSex = femaleGender;
-		}else if (whatsYourSex === "male" || whatsYourSex === "Male" || whatsYourSex === "M" || whatsYourSex === "m"){
-	var whatsYourSex = maleGender;
-		}else if (whatsYourSex === "other" || whatsYourSex === "Other" || whatsYourSex === "O" || whatsYourSex === "o"){
-		var whatsYourSex = hermGender;
-		}else{
-			console.log ("Pick a correct gender.");
-};
-
-
 console.log ("Please see example:");
 console.log ("How old would you like your avatar to be?");
-var ageForm = parseInt(prompt("Enter your avatar " + nameChoice + "\'s age.", 0));
-function ageToTurns(totalAgeAfter){
+
+var age = parseInt(prompt("Enter your avatar " + nameChoice + "\'s age.", 0));
+
+//Age Calculations 				This should say: If you are "age" years old, and chose to play the game for "however long", you would be "this old" by the end of the game.  If your age is past "national for gender", this game would not be a realistic game by definition referncing the time sensative reality feature.  Otherwise you could choose the indefinite playing time feature, which allows you to play as long as you choose and retire when you feel you want to retire in the game or just end the game.  ANd or be given a realistic time scale.
+//Basically it will-- ask your age-- subtract your age from national death age for your gender--turn remaining age into months-- 31 turns per month--Show an option of How long you could play and how many turns that would be. Show rest of options.
+
+function ageCalculations(){
+	if (gender === "female"){
+		var lifeExpectancy = femaleLifeEx - age;
+		return lifeExpectancyLeft = lifeExpectancy;
+	}else if (gender === "male"){
+		var lifeExpectancy = maleLifeEx - age;
+		return lifeExpectancyLeft = lifeExpectancy;
+	}else if (gender === "hermaphrodite"){
+		var lifeExpectancy = hermLifeEx - age;
+		return lifeExpectancyLeft = lifeExpectancy;
+	}else{
+		console.log ("You shouldn't be seeing this, and have made an error!")
+	}
+}
+ageCalculations();
+console.log ("The life expectancy you have left is " + lifeExpectancyLeft + " years on average.");
+
+	var ageInMonths = age * 12;
+
+		function ageToTurns(totalAgeAfter){
 		var conAge = ageForm * 12;
 if (whatsYourSex === maleGender){
 		var maleMonCal = maleLifeEx * 12;
@@ -253,6 +273,8 @@ for (var i = 0, j = gameLengths.length; i < j; i++){
 		return gameLengthReality;
 			}
 	}
+
+
 console.log (gameLengthReality);
 gameLengthReality;
 
