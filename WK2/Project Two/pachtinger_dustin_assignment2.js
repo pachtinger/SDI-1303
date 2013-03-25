@@ -133,39 +133,34 @@ var hermLifeEx = 65;
 console.log ("INSTRUCTIONS & INFORMATION" + "\n" + "--About The Game--");
 
 var currentDate = new Date();
-console.log ("It is " + currentDate + ". Time is passing by, and you need to buld a character and political path.");
-console.log ("You must also decide on the length of time you would like to play this game for?");
-console.log ("Starting with your avatar buildup in it's begining stages, what you will have to decide will be similar to other games, where you have to decide the gender, among other options.  It will be similar to this:");
-console.log ("First you should introduce your avatar and get building!");
+console.log ("It is " + currentDate + "." + "\n" + "Time is passing by, and you need to buld a character and political path. You must also decide on the length of time you would like to play this game for? Starting with your avatars buildup/makeup from it's begining stages, what you will have to decide will be similar to other games, where you have to decide the gender, among other options.  It will be similar to the examples of information being asked below this:");
+console.log ("\n" + "----First you should introduce your avatar and get building!----");
 
-function  avatarName(){
-	var nameChoice = window.prompt ("Please enter your avatar's name:");
-console.log ("Your name is " + nameChoice + "!");
-return nameChoice;
-}
-
-console.log ("So " + nameChoice + " , what would you like your avatar to look like?");
+var avatarName = window.prompt ("Please enter your avatar's name:");
+var nameChoice = avatarName;
+console.log ("You have chosen " + nameChoice + " as your avatar's name!");
+console.log ("So " + nameChoice + ", what would you like your avatar to look like?");
 
 function avatarChoices(){
 	var whatsYourSex = window.prompt ("Pick your gender." + "\n" + "Your options are: Male, Female, Other");
 	var genderChoice = whatsYourSex;
 		if (whatsYourSex === "female" || whatsYourSex === "Female" || whatsYourSex === "F" || whatsYourSex === "f"){
 console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.female.toString());
-console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.toString());
+console.log ("You can pick from these colors to dye your hair: " + "\n" + colorChoices.toString());
 console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
 var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
 console.log (lengthChoice);
 	}else if (whatsYourSex === "male" || whatsYourSex === "Male" || whatsYourSex === "M" || whatsYourSex === "m"){
 console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.male.toString());
-console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.toString());
+console.log ("You can pick from these color to dye your hair: " + "\n" + colorChoices.toString());
 console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
-var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
+var lengthChoice = (partSizes[4] + "," + partSizes[2] + "," + partSizes[3]);
 console.log (lengthChoice);
 	}else if (whatsYourSex === "other" || whatsYourSex === "Other" || whatsYourSex === "O" || whatsYourSex === "o"){
 var othRem = hairChoices.female.pop();
 console.log ('If you have choosen this option of "other", this can only mean you are a "Hermaphrodite", or not human, in either case, you can choose from both of the options available for male and female.');
 console.log ("You can pick from these hairstyle choices: " + "\n" + hairChoices.female.toString() + "\n" + hairChoices.male.toString());
-console.log ("You can also pick from these color's to go with your hair: " + "\n" + colorChoices.toString());
+console.log ("You can pick from these colors to dye your hair: " + "\n" + colorChoices.toString());
 console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
 var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
 console.log (lengthChoice);
@@ -182,51 +177,40 @@ window.location = ("http://www.google.com");
 }
 avatarChoices();
 
-
 var roundsPerChoice = 31;
 var addMaleChar = ("James");
 var addFemChar = ("Donna");
 
+alert("**WARNING**WARNING**WARNING**" + "\n" + "This game may not conincide with your beliefs in politics.  You may, and probably will find this game offending at times.");
+var stayOrGo = window.confirm ("Would you like to contiue?");
+	if (stayOrGo === false){
+console.log (" You will now be redirected to Google.");
+window.location = ("http://www.google.com");
+	}else{
+console.log ("\n" + "Your still here! Thanks for staying to learn more about the game and how to play it. Are you ready to gain further knowledge and experience?");
+}
 
-//Boolean
-/*("Do you believe our government is corrupt?" + ("Do you believe that you have been conditioned to think, act, and respond a certain way to how we Americans live in our society with only little civil liberty adjustments or do you think that is just conspiracy theory? "));
-*/
-function freeYourself (truthBeTold){
+function freeYourself (){
 	var makeChoice = window.confirm ("Do you believe our government is corrupt?");
 		if (makeChoice === true){
-console.log ("As an American citizen who is " + ageForm + " years old, you are very wise in your choice." + "\n" + "The American People, far to often are blind to the obvious, and their own rights and freedoms, that are being taken away from them at an alarming rate!" + "\n" + "There is a long list of reasons why people are not aware of what is going on, which will indirectly come to light throughout the proccess of the game." + "\n" + "It is easy to see that reality is always harder to accept than fiction when it comes to politics." + "\n" + "It is time for Americans to wake up and take our rights and freedoms back" + "\n" + "In the end, we as the people, are stronger than those who are corrupt and in power." + "\n" + "Throughout the game, as your avatar becomes aware of this and a multitude of other corruptions and alarming information, hopefully you will make the right choices to keep your avatar not only alive, but free with the avatars rights and freedoms in tact." + "In the end, what will the cost be? WIll you live? WIll you succeed? What will your virtual world look like?");
-console.log ("The future depends on you, in the game for your avatar and in real life, remember to keep an open mind while playing this game to all possabilities and stay alert and focused to your surroudings.");
-console.log ("\n" + "After deciding your avatar, you will be answering quesitons like this, and you will be seeing political statements that may not be complete with your beliefs or liking of the political system.");
-alert("**WARNING**WARNING**WARNING**" + "\n" + "This game may not conincide with your beliefs in politics.  You may, and probably will find this game offending at times.");
-//console.log ("Enlight of the warning, at this time, I will ask if you would like to continue playing the game?");  -- If need to add extra console log for warning
-var stayOrGo = window.confirm ("Would you like to contiue?");
-	if (stayOrGo === false){
-console.log (" You will now be redirected to Google.");
-window.location = ("http://www.google.com");
+console.log ("\n" + "---- American citizen, you are very wise in your choice. ----" + "\n" + "*/*"+ "\n" +"\t" + 'The American People far to often are blinded by the obvious because of misleading information that is being thrown at them through mainstream media amongst other sources. Their own rights and freedoms at stake, the people are slowly becomging aware that their "Rights and Freedoms" are being taken away from them at an alarming rate!' + " Those that are still not aware, are not aware because of the long list of reasons which will be brought out during the game play of this game. When it comes to people and their politics, it is easy to see that reality is always harder to accept than fiction. " + "We as a society have been brain washed and trained to think and believe in a certain psychological way." + "\n" + "\t" + "It is time for Americans to wake up and take back our rights and freedoms! In the end, we as the people, are stronger than those who are corrupt and in power. " + 'Throughout the game, as your avatar becomes aware of this corruption and a multitude of other corruptions and alarming information, hopefully you will make the right choices to keep your avatar not only alive, but also keep the avtars "Rights and Freedoms" in tact.' + "\n" + "\t" + 'In the end, what will the cost be? Will you live? Will you succeed? What will your virtual world look like? Whether it is in the game for your avatar or in real life, the future depends on "YOU"! Remember to keep an open mind while playing this game to all possabilities and stay alert and focused to your surroudings and the flow of information.');
+console.log ("*/*");
+console.log ("\n" + "After you decide your avatar's name and characteristics, you will be answering quesitons and seeing political statements that may not be indicative of your beliefs or liking of the political system.");
 	}else{
-console.log ("Your still here! Thanks for staying to play the game. Are you ready to gain further knowledge and experience?");
-		}
-	}else{
-alert("**WARNING**WARNING**WARNING**" + "\n" + "This game may not conincide with your beliefs in politics.  You may, and probably will find this game offending at times.");
-var stayOrGo = window.confirm ("Would you like to contiue?");
-	if (stayOrGo === false){
-console.log (" You will now be redirected to Google.");
-window.location = ("http://www.google.com");
-	}else{
-console.log ("Your still here! Thanks for staying to play the game. Are you ready to gain further knowledge and experience? Keep an open mind! The hardest part is letting go of beliefs and opening your mind to new possablities.");
-	}
-console.log ("You really need to wake up and see the world around you." + "\n" + "It is alright that you have your opinion,  but ignoring the facts of reality to hide behind it, is what is destroying America." + "\n" + "But please, by no means take my word for it."  + "\n" + "I want you to doubt me, this game, and the thousands of people, along with those who are experienced in areas of government and power that deal directly with where this information is coming from. Why? Because I want you to use that doubt to go out and educate yourself." + "\n" + "Please, never stop edcuating yourself, then tell me what the facts are and what is going on when you find the truth!");
-console.log ("Question Everything!" + "\n" + "The future depends on you, in the game for your avatar and in real life.");
+console.log ("*/*" + "\n" + "\t" + "You really need to wake up and see the world around you. It is alright that you have your opinion,  but ignoring the facts of reality and hiding behind ignorance, is what is destroying America, and the rest of society in inside of it. However, please, by no means take the word of the game for validity of the information it is putting out there. It is good to have doubt, to doubt the legitity of this game, along with the thousands of people who are finally waking up to the corruption being dealt from those in power, and it is okay to doubt those who are experienced in areas of government and power that deal directly with the resources of where some of this information is coming from. Why? Because if you doubt the legitity of the information in this game, there is a small hope that you as person will go out and find the truth on your own. Maybe even fullfill an extra extended challenge to the game, which is a challange to you to use that doubt and go out and educate yourself on what is going on in today's society. Don't just believe one source such as mainstream media or even what is told to you by the President and those in power. "  +  'Investigate the information to the best of your ability. Follow the resources. Check things out accademically. Never stop edcuating yourself! During this time, it is almost a sure thing that you will be able to come back to the game and cite even further the corruptions that have been mentioned in this game, alone with a whole new list of corruptions. Knowledge is power, and not accepting what you are being told is a great start to finding the truth. Remember to "Question Everything", and the truth will find you.');
+console.log ("*/*");
 	}
 };
 freeYourself ();
-console.log ("For example, you can choose the options and it would look like one of the choices from below:");
-for (var i = 0, j = nameChoices.length; i < j; i++){
-	var toAmTurns = roundsPerChoice * gameLengths[i];
 
-console.log ("To Recap:")
-console.log ("You have choosen " + nameChoice + " as a name for your avatar." + "\n" + "You could choose " + polChoices[i] + " as a political choice for your avatar" + "\n" + "There is also a choice of " + gameLengths[i] + " months for the length of game play you would want to play.");
-console.log ("That works out to be " + toAmTurns + " turns per this game choices length.");
+console.log ("Below is a list of more options and information you can choose for your avatar character to play:")
+function recap(){
+	for ( var i = 0, j = polChoices.length, g = gameLengths.length; i < g, i < j; i++){
+
+console.log ("You could choose " + polChoices[i] + " as a political choice for your avatar" + "\n" + "There is also a choice of " + gameLengths[i] + " months for the length of game play you would want to play.");
+		}
+}
+recap();
 console.log ("\n");
 
 console.log("In this game, your age will determine the realistics in length of game play.");
@@ -241,13 +225,13 @@ if (whatsYourSex === "female" || whatsYourSex === "Female" || whatsYourSex === "
 		var whatsYourSex = hermGender;
 		}else{
 			console.log ("Pick a correct gender.");
-		};
-}
+};
+
 
 console.log ("Please see example:");
 console.log ("How old would you like your avatar to be?");
 var ageForm = parseInt(prompt("Enter your avatar " + nameChoice + "\'s age.", 0));
-while ageToTurns(totalAgeAfter){
+function ageToTurns(totalAgeAfter){
 		var conAge = ageForm * 12;
 if (whatsYourSex === maleGender){
 		var maleMonCal = maleLifeEx * 12;
@@ -265,14 +249,15 @@ if (whatsYourSex === maleGender){
 		console.log ("You have entered information incorrectly, please restart.");
 	}
 for (var i = 0, j = gameLengths.length; i < j; i++){
-	do calcMonths(){
-		var gameLengthReality =
+		var gameLengthReality = totalAgeAfter * gameLengths[i];
+		return gameLengthReality;
 			}
 	}
+console.log (gameLengthReality);
+gameLengthReality;
 
-
-for (var i = 0, j = nameChoices.length; i < j; i++){
-	var toAmTurns = roundsPerChoice * gameLengths[i];
+//for (var i = 0, j = nameChoices.length; i < j; i++){
+//	var toAmTurns = roundsPerChoice * gameLengths[i];
 
 
 console.log ("Your avatar is " + ageForm + " years old!");
@@ -288,7 +273,7 @@ var conAge = ageForm * 12;
 
 
 //console.log ("Your avatar will be " + newAge + " years old by the end of this game");
-};
+
 
 
 //String
