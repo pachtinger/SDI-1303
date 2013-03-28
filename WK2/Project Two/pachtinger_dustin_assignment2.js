@@ -3,7 +3,7 @@ Dustin M. Pachtinger
 1303
 
 */
-
+//Instuctions and Information on Games
 /*
 Characters:
 Will be pretty much anything you would like.  You will be able to choose from a man, woman, and make their different characteristics.
@@ -150,15 +150,15 @@ function avatarChoices(){
 				console.log ("You can pick from these colors to dye your hair: " + "\n" + colorChoices.toString());
 				console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
 					var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
-						console.log (lengthChoice);
-							return gender = ("female");
+					console.log (lengthChoice);
+						return gender = ("female");
 	}else if (whatsYourSex === "male" || whatsYourSex === "Male" || whatsYourSex === "M" || whatsYourSex === "m"){
 				console.log ("As a male character, you can pick from these hairstyle choices: " + "\n" + hairChoices.male.toString());
 				console.log ("You can pick from these color to dye your hair: " + "\n" + colorChoices.toString());
 				console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
 					var lengthChoice = (partSizes[4] + "," + partSizes[2] + "," + partSizes[3]);
-						console.log (lengthChoice);
-							return gender = ("male");
+					console.log (lengthChoice);
+						return gender = ("male");
 	}else if (whatsYourSex === "other" || whatsYourSex === "Other" || whatsYourSex === "O" || whatsYourSex === "o"){
 			var othRem = hairChoices.female.pop();
 				console.log ('If you have choosen this option of "other", this can only mean you are a "Hermaphrodite", or not human, in either case, you can choose from both of the options available for male and female.');
@@ -166,8 +166,8 @@ function avatarChoices(){
 				console.log ("You can pick from these colors to dye your hair: " + "\n" + colorChoices.toString());
 				console.log ('If you choose "Other" for your hairstyle choice, you can also choose your length of hair from these available options:');
 					var lengthChoice = (partSizes[4] + "|" + partSizes[2] + "|" + partSizes[3]);
-						console.log (lengthChoice);
-							return gender = ("hermaphrodite");
+					console.log (lengthChoice);
+						return gender = ("hermaphrodite");
 	}else{
 		window.alert ("You have entered an incorrect response." + "\n" + " You can restart and try again if you choose.");
 		var pageRestart = window.confirm("Would you like to reload the page?");
@@ -181,15 +181,12 @@ function avatarChoices(){
 }
 avatarChoices();
 
-
-//console.log ("This should show "+ gender);
-
 var roundsPerChoice = 31;
 var addMaleChar = ("James");
 var addFemChar = ("Donna");
 
 alert("**WARNING**WARNING**WARNING**" + "\n" + "This game may not conincide with your beliefs in politics.  You may, and probably will find this game offending at times.");
-var stayOrGo = window.confirm ("Would you like to contiue?");
+var stayOrGo = window.confirm ("Would you like to continue?");
 	if (stayOrGo === false){
 console.log (" You will now be redirected to Google.");
 window.location = ("http://www.google.com");
@@ -207,24 +204,23 @@ console.log ("\n" + "After you decide your avatar's name and characteristics, yo
 console.log ("*/*" + "\n" + "\t" + "You really need to wake up and see the world around you. It is alright that you have your opinion,  but ignoring the facts of reality and hiding behind ignorance, is what is destroying America, and the rest of society in inside of it. However, please, by no means take the word of the game for validity of the information it is putting out there. It is good to have doubt, to doubt the legitity of this game, along with the thousands of people who are finally waking up to the corruption being dealt from those in power, and it is okay to doubt those who are experienced in areas of government and power that deal directly with the resources of where some of this information is coming from. Why? Because if you doubt the legitity of the information in this game, there is a small hope that you as person will go out and find the truth on your own. Maybe even fullfill an extra extended challenge to the game, which is a challange to you to use that doubt and go out and educate yourself on what is going on in today's society. Don't just believe one source such as mainstream media or even what is told to you by the President and those in power. "  +  'Investigate the information to the best of your ability. Follow the resources. Check things out accademically. Never stop edcuating yourself! During this time, it is almost a sure thing that you will be able to come back to the game and cite even further the corruptions that have been mentioned in this game, alone with a whole new list of corruptions. Knowledge is power, and not accepting what you are being told is a great start to finding the truth. Remember to "Question Everything", and the truth will find you.');
 console.log ("*/*");
 	}
-};
+}
 freeYourself ();
+console.log ("\n");
 
-console.log ("Below is a list of more options and information you can choose for your avatar character to play:")
+console.log ("----A list of more choices your avatar character will have to chose between is referenced below.----");
 function recap(){
 	for ( var i = 0, j = polChoices.length, g = gameLengths.length; i < g, i < j; i++){
-
-console.log ("You could choose " + polChoices[i] + " as a political choice for your avatar" + "\n" + "There is also a choice of " + gameLengths[i] + " months for the length of game play you would want to play.");
-		}
+		console.log ("You could choose " + polChoices[i] + " as a political choice for your avatar" + "\n" + "There is also a choice of " + gameLengths[i] + " months for the length of game play you would want to play.");
+	}
 }
 recap();
 console.log ("\n");
 
-console.log("In this game, your age will determine the realistics in length of game play.");
-console.log("What that means is, if you start out the game at an " + ageChoice[2] + '\middle age, and you decide to play the game until death, the system will give you the amount of turns based off of your age and a monthly caculation until the national average of death for a male/female is met.');
+console.log("In this game, there will be a realistic mode. In this mode, your age will determine the length of game play. Please see the explantion and examples below for clarification!");
 console.log ("\n");
 
-console.log ("Please see example:");
+console.log ("----Please see example listed below.----");
 console.log ("How old would you like your avatar to be?");
 
 var age = parseInt(prompt("Enter your avatar " + nameChoice + "\'s age.", 0));
@@ -232,7 +228,8 @@ var age = parseInt(prompt("Enter your avatar " + nameChoice + "\'s age.", 0));
 //Age Calculations 				This should say: If you are "age" years old, and chose to play the game for "however long", you would be "this old" by the end of the game.  If your age is past "national for gender", this game would not be a realistic game by definition referncing the time sensative reality feature.  Otherwise you could choose the indefinite playing time feature, which allows you to play as long as you choose and retire when you feel you want to retire in the game or just end the game.  ANd or be given a realistic time scale.
 //Basically it will-- ask your age-- subtract your age from national death age for your gender--turn remaining age into months-- 31 turns per month--Show an option of How long you could play and how many turns that would be. Show rest of options.
 
-function ageCalculations(){
+//Age (Life Expextancies)
+function lifeExpectancies(){
 	if (gender === "female"){
 		var lifeExpectancy = femaleLifeEx - age;
 		return lifeExpectancyLeft = lifeExpectancy;
@@ -246,8 +243,26 @@ function ageCalculations(){
 		console.log ("You shouldn't be seeing this, and have made an error!")
 	}
 }
-ageCalculations();
-console.log ("The life expectancy you have left is " + lifeExpectancyLeft + " years on average.");
+
+console.log ("this is line " + lifeExpectancies());
+
+//Age (Breakdown into Months)
+
+/*
+function yearsToMonths(){
+	var realisticMonths = lifeExpectancyLeft * 12;
+		var totalTurns = realisticMonths * 4;
+			return yourTotalTurns = totalTurns;
+		}
+
+
+yearsToMonths();
+console.log ("The life expectancy you have left is " + lifeExpectancies() + " years on average.");
+console.log ("You have " + yearsToMonths() + " months of life left!");
+console.log ("Which means you would have " + yourTotalTurns + " total turns for your game if you choose reality mode.");
+*/
+
+/*
 
 	var ageInMonths = age * 12;
 
@@ -307,7 +322,7 @@ console.log ("You have chosen to play this game for " + gameLengths[3] + " round
 
 //Total Options
 
-
+*/
 
 
 console.log ("This shows the end.");
